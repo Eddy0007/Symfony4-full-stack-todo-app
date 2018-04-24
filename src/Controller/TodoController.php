@@ -12,6 +12,7 @@ class TodoController extends Controller {
     public function homepage()
     {
 //        return new Response("<h1>Hello and welcome to SYMPHONY</h1>");
-        return $this->render('todos/index.html.twig');
+        $todos = ['Activity 1', 'Activity 2', 'Activity 3', 'Activity 4','Activity 5', 'Activity 6'];
+        return $this->render('todos/index.html.twig', array('todos'=>$todos));
     }
 }

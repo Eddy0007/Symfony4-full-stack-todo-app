@@ -9,9 +9,10 @@
         {% endblock %}
     </head>
     <body>
+        {{ include('inc/navbar.html.twig') }}
         {% block body %}{% endblock %}
 
-        <footer>
+        <footer class="container top-bar stacked-for-medium">
             Project by eddy &copy; 2018
         </footer>
 

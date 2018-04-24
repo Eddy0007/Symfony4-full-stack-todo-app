@@ -3,8 +3,22 @@
 {% block title %}Symfony4 Todo App {% endblock %}
 
 {% block body %}
-    <div class="top-bar stacked-for-medium">
-        <h1>Todos</h1>
-    </div>
-
+    {% if todos %}
+        <table>
+            <thead>
+            <tr>
+                <th width="200">Acitivies</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for todo in todos %}
+                <tr>
+                    <td>{{ todo }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>There are no todos</p>
+    {% endif %}
 {% endblock %}
