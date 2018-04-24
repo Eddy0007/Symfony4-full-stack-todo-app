@@ -8,17 +8,19 @@
             <thead>
             <tr>
                 <th width="200">Acitivies</th>
+                <th width="200">Actions</th>
             </tr>
             </thead>
             <tbody>
             {% for todo in todos %}
                 <tr>
                     <td>{{ todo }}</td>
+                    <td><a class="success button tiny">Done</a></td>
                 </tr>
             {% endfor %}
             </tbody>
         </table>
     {% else %}
-        <p>There are no todos</p>
+        <p>There are no more todos left</p>
     {% endif %}
 {% endblock %}
