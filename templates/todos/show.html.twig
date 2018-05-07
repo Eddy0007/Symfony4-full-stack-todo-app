@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Symfony4 Todo App {% endblock %}
+
+{% block main %}
+    <h1>{{ todo.title }}</h1>
+    <p>{{ todo.body }}</p>
+    <hr>
+    <a href="/">Go Back</a>
+{% endblock %}

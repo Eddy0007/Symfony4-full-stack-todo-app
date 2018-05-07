@@ -2,25 +2,25 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block title %}Symfony4 Todo App {% endblock %}
         {% block stylesheets %}
-            <link rel="stylesheet" href="css/foundation.css">
-            <link rel="stylesheet" href="css/app.css">
+            <link rel="stylesheet" href="/css/foundation.css">
+            <link rel="stylesheet" href="/css/app.css">
         {% endblock %}
     </head>
     <body>
         {{ include('inc/navbar.html.twig') }}
-        {% block body %}{% endblock %}
+        {% block main %}{% endblock %}
 
         <footer class="container top-bar stacked-for-medium">
             Project by eddy &copy; {{ "now"|date("Y") }}
         </footer>
 
         {% block javascripts %}
-            <script src="js/vendor/jquery.js"></script>
-            <script src="js/vendor/what-input.js"></script>
-            <script src="js/vendor/foundation.js"></script>
-            <script src="js/app.js"></script>
+            <script src="/js/vendor/jquery.js"></script>
+            <script src="/js/vendor/what-input.js"></script>
+            <script src="/js/vendor/foundation.js"></script>
+            <script src="/js/app.js"></script>
         {% endblock %}
     </body>
 </html>
