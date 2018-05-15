@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59983bdd-1eae-48b5-883f-bb2d1423a83e" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/TodoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/TodoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/inc/navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/inc/navbar.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/todos/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/todos/new.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,16 +27,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TodoController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TodoController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controller/TodoController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="59" column="76" selection-start-line="59" selection-start-column="76" selection-end-line="59" selection-end-column="76" />
+            <state relative-caret-position="427">
+              <caret line="74" column="52" selection-start-line="74" selection-start-column="52" selection-end-line="74" selection-end-column="52" />
               <folding>
                 <element signature="e#33#53#0#PHP" expanded="true" />
                 <element signature="e#638#661#0#PHP" expanded="true" />
-                <element signature="e#2598#2619#0#PHP" expanded="true" />
-                <element signature="e#2715#2737#0#PHP" expanded="true" />
+                <element signature="e#2428#2449#0#PHP" expanded="true" />
+                <element signature="e#2705#2727#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -51,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="new.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/todos/new.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+              <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -86,8 +86,8 @@
         <option value="$PROJECT_DIR$/templates/base.html.twig" />
         <option value="$PROJECT_DIR$/src/Entity/Todo.php" />
         <option value="$PROJECT_DIR$/templates/inc/navbar.html.twig" />
-        <option value="$PROJECT_DIR$/src/Controller/TodoController.php" />
         <option value="$PROJECT_DIR$/templates/todos/new.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/TodoController.php" />
       </list>
     </option>
   </component>
@@ -298,12 +298,12 @@
       <workItem from="1524584710578" duration="8755000" />
       <workItem from="1525061357598" duration="803000" />
       <workItem from="1525718799563" duration="9085000" />
-      <workItem from="1526391604830" duration="9187000" />
+      <workItem from="1526391604830" duration="10071000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27830000" />
+    <option name="totallyTimeSpent" value="28714000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1814" y="-538" width="1046" height="877" extended-state="0" />
@@ -396,8 +396,8 @@
           <folding>
             <element signature="e#33#53#0#PHP" expanded="true" />
             <element signature="e#638#661#0#PHP" expanded="true" />
-            <element signature="e#2598#2619#0#PHP" expanded="true" />
-            <element signature="e#2715#2737#0#PHP" expanded="true" />
+            <element signature="e#2428#2449#0#PHP" expanded="true" />
+            <element signature="e#2705#2727#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -416,8 +416,8 @@
           <folding>
             <element signature="e#33#53#0#PHP" expanded="true" />
             <element signature="e#638#661#0#PHP" expanded="true" />
-            <element signature="e#2598#2619#0#PHP" expanded="true" />
-            <element signature="e#2715#2737#0#PHP" expanded="true" />
+            <element signature="e#2428#2449#0#PHP" expanded="true" />
+            <element signature="e#2705#2727#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -545,19 +545,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/TodoController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="59" column="76" selection-start-line="59" selection-start-column="76" selection-end-line="59" selection-end-column="76" />
-          <folding>
-            <element signature="e#33#53#0#PHP" expanded="true" />
-            <element signature="e#638#661#0#PHP" expanded="true" />
-            <element signature="e#2598#2619#0#PHP" expanded="true" />
-            <element signature="e#2715#2737#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/todos/show.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -568,7 +555,20 @@
     <entry file="file://$PROJECT_DIR$/templates/todos/new.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/TodoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="74" column="52" selection-start-line="74" selection-start-column="52" selection-end-line="74" selection-end-column="52" />
+          <folding>
+            <element signature="e#33#53#0#PHP" expanded="true" />
+            <element signature="e#638#661#0#PHP" expanded="true" />
+            <element signature="e#2428#2449#0#PHP" expanded="true" />
+            <element signature="e#2705#2727#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

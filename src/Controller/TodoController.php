@@ -67,7 +67,12 @@ class TodoController extends Controller {
 
         if($form->isSubmitted() && $form->isValid()){
             $todo = $form->getData();
-            return $this->redirectToRoute('todo_success');
+
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($todo);
+            $entityManager->flush();
+
+            return $this->redirectToRoute('todo_list');
         }
         return $this->render('todos/new.html.twig', array(
             'form' => $form->createView(),
