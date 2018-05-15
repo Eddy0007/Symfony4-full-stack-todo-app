@@ -1,3 +1,17 @@
-{{ form_start(form) }}
-{{ form_widget(form) }}
-{{ form_end(form) }}
+{#{{ form_start(form) }}#}
+{#{{ form_widget(form) }}#}
+{#{{ form_end(form) }}#}
+
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Symfony4 Todo App {% endblock %}
+
+{% block main %}
+    {{ form_start(form) }}
+    {{ form_errors(form) }}
+
+    {{ form_row(form.title) }}
+    {{ form_row(form.body) }}
+    {{ form_end(form) }}
+{% endblock %}

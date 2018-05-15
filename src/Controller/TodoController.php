@@ -3,6 +3,7 @@ namespace App\Controller;
 
 use App\Entity\Todo;
 //use Doctrine\DBAL\Types\TextType;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -22,14 +23,7 @@ class TodoController extends Controller {
         return $this->render('todos/index.html.twig', array('todos'=>$todos));
     }
 
-    /**
-     * @Route("/todo/{id}", name = "todo_show")
-     */
-    public function show($id)
-    {
-        $todo = $this->getDoctrine()->getRepository(Todo::class)->find($id);
-        return $this->render('todos/show.html.twig', array('todo' => $todo));
-    }
+
 
 //    Adding data to the database using a url: Not recommended.
 //    /**
@@ -51,19 +45,23 @@ class TodoController extends Controller {
 //    }
 
     /**
-     * @Route("/form")
+     * @Route("/todo/new", name="new_todo")
+     * @Method({"GET", "POST"})
      */
     public function new(Request $request)
     {
 //        creates a todo and gives it some dummy data for.
         $todo = new Todo();
-        $todo->setTitle('Do something');
-        $todo->setBody('Something is being done');
+//        $todo->setTitle('Do something');
+//        $todo->setBody('Something is being done');
 
         $form = $this->createFormBuilder($todo)
-            ->add('title', TextType::class)
-            ->add('body', TextType::class)
-            ->add('save', SubmitType::class, array('label'=>'Create Todo'))
+            ->add('title', TextType::class, array('attr' => array('required')))
+            ->add('body', TextType::class, array('attr' => array('required')))
+            ->add('save', SubmitType::class, array(
+                'label'=>'Create Todo',
+                'attr'=>array('class' => 'button')
+                ))
             ->getForm();
         $form->handleRequest($request);
 
@@ -74,5 +72,14 @@ class TodoController extends Controller {
         return $this->render('todos/new.html.twig', array(
             'form' => $form->createView(),
         ));
+    }
+
+    /**
+     * @Route("/todo/{id}", name = "todo_show")
+     */
+    public function show($id)
+    {
+        $todo = $this->getDoctrine()->getRepository(Todo::class)->find($id);
+        return $this->render('todos/show.html.twig', array('todo' => $todo));
     }
 }
