@@ -2,8 +2,12 @@
 namespace App\Controller;
 
 use App\Entity\Todo;
+//use Doctrine\DBAL\Types\TextType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 class TodoController extends Controller {
@@ -45,4 +49,30 @@ class TodoController extends Controller {
 //
 //        return new Response('Saved a todo with the id of '.$todo->getId());
 //    }
+
+    /**
+     * @Route("/form")
+     */
+    public function new(Request $request)
+    {
+//        creates a todo and gives it some dummy data for.
+        $todo = new Todo();
+        $todo->setTitle('Do something');
+        $todo->setBody('Something is being done');
+
+        $form = $this->createFormBuilder($todo)
+            ->add('title', TextType::class)
+            ->add('body', TextType::class)
+            ->add('save', SubmitType::class, array('label'=>'Create Todo'))
+            ->getForm();
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid()){
+            $todo = $form->getData();
+            return $this->redirectToRoute('todo_success');
+        }
+        return $this->render('todos/new.html.twig', array(
+            'form' => $form->createView(),
+        ));
+    }
 }
