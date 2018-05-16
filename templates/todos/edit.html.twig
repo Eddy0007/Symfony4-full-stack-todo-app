@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}<h1>Edit Todo</h1> {% endblock %}
+
+{% block main %}
+    {#{{ form_start(form) }}#}
+    {#{{ form_errors(form) }}#}
+
+    {#{{ form_row(form.title) }}#}
+    {#{{ form_row(form.body) }}#}
+    {#{{ form_end(form) }}#}
+
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+{% endblock %}

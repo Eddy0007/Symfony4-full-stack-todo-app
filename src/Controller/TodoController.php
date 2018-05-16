@@ -80,6 +80,36 @@ class TodoController extends Controller {
     }
 
     /**
+     * @Route("/todo/edit/{id}", name="edit_todo")
+     * @Method({"GET", "POST"})
+     */
+    public function edit(Request $request, $id)
+    {
+        $todo = new Todo();
+        $todo = $this->getDoctrine()->getRepository(Todo::class)->find($id);
+
+        $form = $this->createFormBuilder($todo)
+            ->add('title', TextType::class, array('attr' => array('required')))
+            ->add('body', TextType::class, array('attr' => array('required')))
+            ->add('save', SubmitType::class, array(
+                'label'=>'Update Todo',
+                'attr'=>array('class' => 'button')
+            ))
+            ->getForm();
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid()){
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->flush();
+
+            return $this->redirectToRoute('todo_list');
+        }
+        return $this->render('todos/edit.html.twig', array(
+            'form' => $form->createView(),
+        ));
+    }
+
+    /**
      * @Route("/todo/{id}", name = "todo_show")
      */
     public function show($id)

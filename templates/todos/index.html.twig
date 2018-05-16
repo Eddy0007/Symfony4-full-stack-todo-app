@@ -15,6 +15,7 @@
                 <tr>
                     <td>{{ todo.title }}</td>
                     <td><a href="/todo/{{ todo.id }}" class="success button tiny">Show</a></td>
+                    <td><a href="/todo/edit/{{ todo.id }}" class="warning button tiny">Edit</a></td>
                     <td><a href="#" class="alert button tiny" data-id="{{ todo.id }}">Delete</a></td>
                 </tr>
             {% endfor %}
