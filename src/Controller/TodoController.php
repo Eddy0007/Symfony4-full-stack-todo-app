@@ -87,4 +87,20 @@ class TodoController extends Controller {
         $todo = $this->getDoctrine()->getRepository(Todo::class)->find($id);
         return $this->render('todos/show.html.twig', array('todo' => $todo));
     }
+
+    /**
+     * @Route("/todo/delete/{id}")
+     * @method({"DELETE"})
+     */
+    public function  delete(Request $request, $id)
+    {
+        $todo = $this->getDoctrine()->getRepository(Todo::class)->find($id);
+
+        $entityManager = $this->getDoctrine()->getManager();
+        $entityManager->remove($todo);
+        $entityManager->flush();
+
+        $response = new Response();
+        $response->send();
+    }
 }

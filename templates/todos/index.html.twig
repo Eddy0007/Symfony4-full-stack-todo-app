@@ -3,7 +3,7 @@
 
 {% block main %}
     {% if todos %}
-        <table>
+        <table id="todos">
             <thead>
             <tr>
                 <th width="200">Acitivies</th>
@@ -14,7 +14,8 @@
             {% for todo in todos %}
                 <tr>
                     <td>{{ todo.title }}</td>
-                    <td><a href="/todo/{{ todo.id }}" class="success button tiny">Done</a></td>
+                    <td><a href="/todo/{{ todo.id }}" class="success button tiny">Show</a></td>
+                    <td><a href="#" class="alert button tiny" data-id="{{ todo.id }}">Delete</a></td>
                 </tr>
             {% endfor %}
             </tbody>
@@ -22,4 +23,5 @@
     {% else %}
         <p>There are no more todos left</p>
     {% endif %}
+    <script src="/js/main.js"></script>
 {% endblock %}
